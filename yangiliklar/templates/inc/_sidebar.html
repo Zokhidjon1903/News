@@ -1,0 +1,15 @@
+{% load news_tags %}
+
+{% comment %}
+<div class="list-group">
+    <a href="{% url 'home' %}" class="list-group-item list-group-item-action active" aria-current="true">
+        Yangilik turlari
+    </a>
+    {% get_list_categories as categories %}
+    {% for item in categories %}
+    <a href="{% url 'category' item.pk %}" class="list-group-item list-group-item-action">{{item.title}}</a>
+    {% endfor %}
+</div>
+{% endcomment %}
+
+{% show_categories %}
